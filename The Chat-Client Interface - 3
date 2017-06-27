@@ -1,0 +1,15 @@
+5. Styling the chat window
+
+
+sendMess method
+public void sendMess(String s) {
+byte[] data = (name + ": " + s).getBytes();
+DatagramPacket packet = new DatagramPacket(data,data.length,iadr,port);
+try {
+so.send(packet);
+}
+catch(IOException ie) {
+Toolkit.getDefaultToolkit().beep();
+JOptionPane.showMessageDialog(null, "Data overflow !");
+}
+}
