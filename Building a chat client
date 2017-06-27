@@ -1,0 +1,1 @@
+We start with a simple graphical chat client. It takes two command-line parameters -- the server name and the port number to connect to. It makes a socket connection and then opens a window with a large output region and a small input region
