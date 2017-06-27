@@ -1,0 +1,12 @@
+2.The receiver class:
+
+class Receiver implements Runnable {
+Thread activity = new Thread(this);
+MulticastSocket so;
+JTextArea txt;
+Receiver(MulticastSocket sock, JTextArea txtAr) {
+so = sock;
+txt = txtAr;
+activity.start();
+}
+}
