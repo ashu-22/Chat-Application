@@ -1,0 +1,9 @@
+7. The main code
+
+public static void main(String[] arg) throws IOException {
+String in = JOptionPane.showInputDialog(null,"What's your name?");
+if(arg.length>0) 
+in = arg[0];
+new JChat(in,"Add a D-Class IP",9876);
+}
+}
