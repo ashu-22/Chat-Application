@@ -1,0 +1,22 @@
+
+6.The actionListener
+
+public void actionPerformed(ActionEvent e) {
+if(e.getSource()==write) {
+sendMess(write.getText());
+write.setText("");
+}
+else if(e.getSource()==quit) {
+sendMess("Offline");
+try {
+so.leaveGroup(iadr);
+}
+catch(IOException ie) {
+Toolkit.getDefaultToolkit().beep();
+JOptionPane.showMessageDialog(null, "Data overflow, connection error !");
+}
+so.close();
+dispose();
+System.exit(0);
+}
+}
